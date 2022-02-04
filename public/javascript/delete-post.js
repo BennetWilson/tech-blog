@@ -6,6 +6,11 @@ const deletePostClickHandler = async (event) => {
     });
     location.reload()
   };
-  document
-    .querySelector('#delete-btn-red')
-    .addEventListener('click', deletePostClickHandler);
+var redButton = document
+.querySelectorAll('.delete-btn-red')
+
+  for (let i = 0; i < redButton.length; i++) {
+    redButton[i].addEventListener('click', deletePostClickHandler);
+  }
+  
+    
